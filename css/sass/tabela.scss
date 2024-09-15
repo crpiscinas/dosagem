@@ -53,7 +53,7 @@
 #resultado-aluminio::after,
 #resultado-aluminio-outras::after,
 #resultado-dureza::after {
-  content: " Kg";
+  content: " kg";
   display: inline;
 }
 
@@ -61,13 +61,14 @@
 #resultado-clarificante::after,
 #resultado-ph-menos::after,
 #resultado-algicida::after,
-#resultado-genquest::after {
+#resultado-genquest::after,
+#resultado-alcalinidade2::after {
   content: " ml";
   display: inline;
 }
 
 #resultado-ph-mais::after {
-  content: " Kg ou ml";
+  content: " kg ou ml";
   display: inline;
 }
 
