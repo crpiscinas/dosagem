@@ -1,0 +1,85 @@
+#calc-piscina {
+  padding: 40px 20px;
+  p {
+    color: $gray;
+    font-weight: 500;
+    text-align: center;
+  }
+  .calculos {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    .calculos-piscina,
+    .calculos-prainha {
+      h2 {
+        font-size: 20px;
+        text-align: center;
+        padding-bottom: 8px;
+      }
+      div {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+      span {
+        margin-top: 8px;
+        text-align: center;
+        display: block;
+        color: $resultado;
+        font-size: 32px;
+        font-weight: 700;
+      }
+    }
+  }
+  #resultado-piscina,
+  #resultado-prainha {
+    &::before {
+      content: "= ";
+      display: inline;
+    }
+  }
+  .resultado-piscina {
+    margin: 40px auto 0 auto;
+    text-align: center;
+    width: 50%;
+    background-color: $secondary-color;
+    color: $secondary-color-text;
+    padding: 20px;
+    border-radius: 4px;
+    p {
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+}
+#resultado-m3 {
+  color: $resultado;
+  font-size: 28px;
+}
+
+@include d(s) {
+  #calc-piscina {
+    padding: 20px 10px;
+    .calculos {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      justify-content: space-between;
+      .calculos-piscina,
+      .calculos-prainha {
+        h2 {
+          font-size: 16px;
+        }
+        span {
+          font-size: 24px;
+        }
+      }
+    }
+    .resultado-piscina {
+      padding: 16px;
+      width: 100%;
+    }
+  }
+}

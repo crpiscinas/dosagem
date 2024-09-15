@@ -1,0 +1,384 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  background-color: #fcfdff;
+}
+
+p {
+  line-height: 1.4rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  background-color: #0079c0;
+  color: #dae9f6;
+  padding: 20px;
+  border-radius: 4px;
+}
+header h1 {
+  padding-top: 16px;
+  font-size: 36px;
+  align-self: center;
+}
+header a {
+  padding: 20px;
+  color: #dae9f6;
+  align-self: flex-end;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 575px) {
+  header h1 {
+    font-size: 24px;
+  }
+  header a {
+    padding: 12px;
+  }
+}
+.form-group {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 2px;
+}
+.form-group input {
+  width: 120px;
+  display: block;
+  padding: 6px;
+  color: #ff8343;
+  font-weight: bolder;
+  font-size: 20px;
+  border: 1px solid #2c3134;
+  border-radius: 4px;
+}
+.form-group input:focus {
+  outline: 1px solid #ef9a6e;
+  background: #fcfcfc;
+}
+
+#calc-piscina {
+  padding: 40px 20px;
+}
+#calc-piscina p {
+  color: #2c3134;
+  font-weight: 500;
+  text-align: center;
+}
+#calc-piscina .calculos {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+}
+#calc-piscina .calculos .calculos-piscina h2,
+#calc-piscina .calculos .calculos-prainha h2 {
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 8px;
+}
+#calc-piscina .calculos .calculos-piscina div,
+#calc-piscina .calculos .calculos-prainha div {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+#calc-piscina .calculos .calculos-piscina span,
+#calc-piscina .calculos .calculos-prainha span {
+  margin-top: 8px;
+  text-align: center;
+  display: block;
+  color: #4158a6;
+  font-size: 32px;
+  font-weight: 700;
+}
+#calc-piscina #resultado-piscina::before,
+#calc-piscina #resultado-prainha::before {
+  content: "= ";
+  display: inline;
+}
+#calc-piscina .resultado-piscina {
+  margin: 40px auto 0 auto;
+  text-align: center;
+  width: 50%;
+  background-color: #ef9a6e;
+  color: #642809;
+  padding: 20px;
+  border-radius: 4px;
+}
+#calc-piscina .resultado-piscina p {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#resultado-m3 {
+  color: #4158a6;
+  font-size: 28px;
+}
+
+@media screen and (max-width: 575px) {
+  #calc-piscina {
+    padding: 20px 10px;
+  }
+  #calc-piscina .calculos {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #calc-piscina .calculos .calculos-piscina h2,
+  #calc-piscina .calculos .calculos-prainha h2 {
+    font-size: 16px;
+  }
+  #calc-piscina .calculos .calculos-piscina span,
+  #calc-piscina .calculos .calculos-prainha span {
+    font-size: 24px;
+  }
+  #calc-piscina .resultado-piscina {
+    padding: 16px;
+    width: 100%;
+  }
+}
+.form-group {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 2px;
+}
+.form-group input {
+  width: 120px;
+  display: block;
+  padding: 6px;
+  color: #ff8343;
+  font-weight: bolder;
+  font-size: 20px;
+  border: 1px solid #2c3134;
+  border-radius: 4px;
+}
+.form-group input:focus {
+  outline: 1px solid #ef9a6e;
+  background: #fcfcfc;
+}
+
+#calc-produtos {
+  padding: 20px 20px;
+}
+#calc-produtos p {
+  color: #2c3134;
+  font-weight: 500;
+  text-align: center;
+}
+#calc-produtos .produtos {
+  margin: 40px auto 0 auto;
+  display: flex;
+  gap: 20px 40px;
+  max-width: 940px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#calc-produtos .form-group {
+  display: block;
+  width: 200px;
+}
+#calc-produtos .form-group label {
+  font-weight: 700;
+}
+#calc-produtos .form-group div {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+#calc-produtos .form-group div span {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 575px) {
+  .produtos {
+    margin: 10px auto 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    flex-wrap: nowrap;
+  }
+  .form-group {
+    min-width: 200px;
+  }
+}
+.form-group {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 2px;
+}
+.form-group input {
+  width: 120px;
+  display: block;
+  padding: 6px;
+  color: #ff8343;
+  font-weight: bolder;
+  font-size: 20px;
+  border: 1px solid #2c3134;
+  border-radius: 4px;
+}
+.form-group input:focus {
+  outline: 1px solid #ef9a6e;
+  background: #fcfcfc;
+}
+
+#tabela {
+  margin-top: 20px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+}
+#tabela table {
+  max-width: 980px;
+  padding: 12px;
+  border-collapse: collapse;
+}
+#tabela table td {
+  border-bottom: 1px solid #6f7d85;
+  padding: 8px;
+  border-collapse: collapse;
+}
+#tabela table tr {
+  height: 50px;
+}
+#tabela table tr:hover {
+  background: #dae9f6 !important;
+}
+#tabela table tr:nth-child(even) {
+  background-color: #eaeaea;
+  border-bottom: 1px solid #6f7d85;
+}
+#tabela table .resultado {
+  color: #4158a6;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 575px) {
+  #tabela {
+    padding: 0 10px;
+  }
+  #tabela table {
+    align-items: center;
+    border: 1px solid #6f7d85;
+  }
+  #tabela table td {
+    display: flex;
+    min-width: 300px;
+  }
+  #tabela table tr {
+    width: 100%;
+  }
+}
+.form-group {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 2px;
+}
+.form-group input {
+  width: 120px;
+  display: block;
+  padding: 6px;
+  color: #ff8343;
+  font-weight: bolder;
+  font-size: 20px;
+  border: 1px solid #2c3134;
+  border-radius: 4px;
+}
+.form-group input:focus {
+  outline: 1px solid #ef9a6e;
+  background: #fcfcfc;
+}
+
+#resultado-alcalinidade::after,
+#resultado-cloro-estabilizado::after,
+#resultado-cloro::after,
+#resultado-aluminio::after,
+#resultado-aluminio-outras::after,
+#resultado-dureza::after {
+  content: " Kg";
+  display: inline;
+}
+
+#resultado-php-::after,
+#resultado-clarificante::after,
+#resultado-ph-menos::after,
+#resultado-algicida::after,
+#resultado-genquest::after {
+  content: " ml";
+  display: inline;
+}
+
+#resultado-ph-mais::after {
+  content: " Kg ou ml";
+  display: inline;
+}
+
+#resultado-cianurico::after {
+  content: " m³";
+  display: inline;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+footer {
+  margin-top: 40px;
+}
+footer img {
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=style.css.map */

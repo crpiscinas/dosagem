@@ -1,0 +1,44 @@
+#calc-produtos {
+  padding: 20px 20px;
+  p {
+    color: $gray;
+    font-weight: 500;
+    text-align: center;
+  }
+  .produtos {
+    margin: 40px auto 0 auto;
+    display: flex;
+    gap: 20px 40px;
+    max-width: 940px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .form-group {
+    display: block;
+    width: 200px;
+    label {
+      font-weight: 700;
+    }
+    div {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@include d(s) {
+  .produtos {
+    margin: 10px auto 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    flex-wrap: nowrap;
+  }
+  .form-group {
+    min-width: 200px;
+  }
+}

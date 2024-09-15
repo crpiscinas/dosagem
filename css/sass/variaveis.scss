@@ -1,0 +1,70 @@
+$primary-color: #0079c0;
+$secondary-color: #ef9a6e;
+$secondary-color-text: #642809;
+$medidas: #ff8343;
+$quantidade: #179bae;
+$resultado: #4158a6;
+$gray: #2c3134;
+$gray1: #6f7d85;
+$gray2: #dae9f6;
+
+.flex {
+  display: flex;
+}
+
+$l-device: 1200px;
+$m-device: 768px;
+$s-device: 576px;
+$ss-device: 386px;
+
+.container {
+  max-width: $l-device;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  // padding: 20px;
+  box-shadow: 3px 4px 8px (rgba(0, 0, 0, 0.2));
+  border-radius: 4px;
+  // background-color: #eaeaea;
+}
+
+@mixin d($size) {
+  @if $size == l {
+    @media screen and (min-width: #{$l-device}) {
+      @content;
+    }
+  } @else if $size == m {
+    @media screen and (max-width: #{$m-device}) {
+      @content;
+    }
+  } @else if $size == s {
+    @media screen and (max-width: #{$s-device - 1}) {
+      @content;
+    }
+  }
+
+  .form-group {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    label {
+      display: block;
+      margin-bottom: 2px;
+    }
+    input {
+      width: 120px;
+      display: block;
+      padding: 6px;
+      color: $medidas;
+      font-weight: bolder;
+      font-size: 20px;
+      border: 1px solid $gray;
+      border-radius: 4px;
+      &:focus {
+        outline: 1px solid $secondary-color;
+        background: #fcfcfc;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+header {
+  display: flex;
+  flex-direction: column;
+  background-color: $primary-color;
+  color: $gray2;
+  padding: 20px;
+  border-radius: 4px;
+  h1 {
+    padding-top: 16px;
+    font-size: 36px;
+    align-self: center;
+  }
+  a {
+    padding: 20px;
+    color: $gray2;
+    align-self: flex-end;
+    font-weight: 500;
+  }
+}
+
+@include d(s) {
+  header {
+    h1 {
+      font-size: 24px;
+    }
+    a {
+      padding: 12px;
+    }
+  }
+}

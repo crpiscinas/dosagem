@@ -1,0 +1,80 @@
+#tabela {
+  margin-top: 20px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  table {
+    max-width: 980px;
+    padding: 12px;
+    border-collapse: collapse;
+    td {
+      border-bottom: 1px solid $gray1;
+      padding: 8px;
+      border-collapse: collapse;
+    }
+    tr {
+      height: 50px;
+      &:hover {
+        background: $gray2 !important;
+      }
+      &:nth-child(even) {
+        background-color: #eaeaea;
+        border-bottom: 1px solid $gray1;
+      }
+    }
+    .resultado {
+      color: $resultado;
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+}
+
+@include d(s) {
+  #tabela {
+    padding: 0 10px;
+    table {
+      align-items: center;
+      border: 1px solid $gray1;
+      td {
+        display: flex;
+        min-width: 300px;
+      }
+      tr {
+        width: 100%;
+      }
+    }
+  }
+}
+
+#resultado-alcalinidade::after,
+#resultado-cloro-estabilizado::after,
+#resultado-cloro::after,
+#resultado-aluminio::after,
+#resultado-aluminio-outras::after,
+#resultado-dureza::after {
+  content: " Kg";
+  display: inline;
+}
+
+#resultado-php-::after,
+#resultado-clarificante::after,
+#resultado-ph-menos::after,
+#resultado-algicida::after,
+#resultado-genquest::after {
+  content: " ml";
+  display: inline;
+}
+
+#resultado-ph-mais::after {
+  content: " Kg ou ml";
+  display: inline;
+}
+
+#resultado-cianurico::after {
+  content: " m³";
+  display: inline;
+}
+.bold {
+  font-weight: 600;
+}

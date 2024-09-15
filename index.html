@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Cálculos</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Cálculos de dosagem de produtos</h1>
+      <a href="mailto:celsoricardo.ml@gmail.com">celsoricardo.piscinas@gmail.com</a>
+    </header>
+    <section id="calc-piscina">
+      <p>Coloque no campo as medidas da piscina, caso não tenha prainha deixar em branco ou zero</p>
+      <div class="calculos">
+        <div class="calculos-piscina">
+          <h2>Medidas da Piscina</h2>
+          <div>
+            <form action="" id="formulario_piscina">
+              <div class="form-group">
+                <label for="">Largura</label>
+                <input type="number" value="1">
+              </div>
+              <div class="form-group">
+                <label for="">Comprimento</label>
+                <input type="number" value="1">
+              </div>
+              <div class="form-group">
+                <label for="">Profundidade</label>
+                <input type="number" value="1">
+              </div>
+            </form>
+            <span id="resultado-piscina"></span>
+          </div>
+        </div>
+        <div class="calculos-prainha">
+          <h2>Medidas da prainha</h2>
+          <div>
+            <form action="" id="formulario_prainha">
+              <div class="form-group">
+                <label for="">Largura</label>
+                <input type="number" value="0" required>
+              </div>
+              <div class="form-group">
+                <label for="">Comprimento</label>
+                <input type="number" value="0">
+              </div>
+              <div class="form-group">
+                <label for="">Profundidade</label>
+                <input type="number" value="0">
+              </div>
+            </form>
+            <span id="resultado-prainha"></span>
+          </div>
+        </div>
+      </div>
+      <div class="resultado-piscina">
+        <p>Sua piscina tem <span id="resultado-m3"></span>m³</p>
+      </div>
+    </section>
+    <section id="calc-produtos">
+      <p>Coloque a quantidade do produto a ser adicionada em ml, g ou pmm e faixa.</p>
+      <div class="produtos">
+        <div class="form-group ">
+          <label for="alcalinidade">Alcalinidade</label>
+          <div>
+            <input type="number" id="alcalinidade" class="prod">
+            <span>pmm</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="">Clarificante</label>
+          <div>
+            <input type="number" class="prod" id="clarificante">
+            <span>ml</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="">Ph + ou -</label>
+          <div>
+            <input type="number" class="prod" id="ph-mais">
+            <span>faixa</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="">Cloro</label>
+          <div>
+            <input type="number" class="prod" id="cloro">
+            <span>g</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="">Algicida</label>
+          <div>
+            <input type="number" class="prod" id="algicida">
+            <span>ml</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="">Genquest</label>
+          <div>
+            <input type="number" class="prod" id="genquest">
+            <span>ml</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="">Dureza</label>
+          <div>
+            <input type="number" class="prod" id="dureza">
+            <span>ml</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="">Acido Cianúrico</label>
+          <div>
+            <input type="number" class="prod" id="acido">
+            <span>%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="tabela">
+      <table>
+        <tr>
+          <td class="bold">Elevador de Alcalinidade</td>
+          <td>15g para cada 1.000Lt</td>
+          <td>sobe 10pmm</td>
+          <td>ideal entre 80 a 120 pmm</td>
+          <td>Total</td>
+          <td id="resultado-alcalinidade" class="resultado"></td>
+        </tr>
+        <tr>
+          <td class="bold">Redutor de Alcalinidade</td>
+          <td>15g para cada 1.000Lt</td>
+          <td>sobe 10pmm</td>
+          <td>ideal entre 80 a 120 pmm</td>
+          <td>Total</td>
+          <td id="resultado-alcalinidade2" class="resultado"></td>
+        </tr>
+        <tr>
+          <td class="bold">Clarificante</td>
+          <td>10ml para cada 1.000Lt</td>
+          <td>para decantar</td>
+          <td>1,5g para cristalização</td>
+          <td>Total</td>
+          <td id="resultado-clarificante" class="resultado"></td>
+        </tr>
+        <tr>
+          <td class="bold">Ph + Barrilha ou líquido </td>
+          <td>10g para cada 1.000Lt</td>
+          <td>sobe 01 faixa</td>
+          <td>ideal entre 7,4 a 7,6 pmm</td>
+          <td>Total</td>
+          <td id="resultado-ph-mais" class="resultado"></td>
+        </tr>
+        <tr>
+          <td class="bold">Ph - Acalinidade -</td>
+          <td>10ml para cada 1.000Lt</td>
+          <td>sobe 01 faixa</td>
+          <td>ph 7,4 a 7,6 Alc 80 a 120</td>
+          <td>Total</td>
+          <td id="resultado-ph-menos" class="resultado"></td>
+        </tr>
+
+        <tr>
+          <td class="bold">Cloro Hth Tradicional</td>
+          <td>10g para cada 1.000Lt</td>
+          <td>cloro em 0,0ppm</td>
+          <td>15g para fazer oxidação</td>
+          <td>Total</td>
+          <td id="resultado-cloro" class="resultado"></td>
+        </tr>
+        <tr>
+          <td class="bold">Cloro estabilizado 3x1</td>
+          <td>10g para cada 1.000Lt</td>
+          <td>cloro em 0,0ppm</td>
+          <td>0,5g para cada faixa etária</td>
+          <td>Total</td>
+          <td id="resultado-cloro-estabilizado" class="resultado"></td>
+        </tr>
+        <tr>
+          <td class="bold">Algicida Choque</td>
+          <td>10ml para cada 1.000Lt</td>
+          <td>água com algas</td>
+          <td>verde ou brancas</td>
+          <td>Total</td>
+          <td id="resultado-algicida" class="resultado"></td>
+        </tr>
+        <tr>
+          <td class="bold">Sulfato de Alumínio Genco </td>
+          <td>20g para cada 1.000Lt</td>
+          <td>para decantar</td>
+          <td>só usar em situações critica</td>
+          <td>Total</td>
+          <td id="resultado-aluminio" class="resultado"></td>
+        </tr>
+        <tr>
+          <td class="bold">Sulfato de Alumínio Outras </td>
+          <td>40g para cada 1.000Lt</td>
+          <td>para decantar</td>
+          <td>só usar em situações critica</td>
+          <td>Total</td>
+          <td id="resultado-aluminio-outras" class="resultado"></td>
+        </tr>
+        <tr>
+          <td class="bold">Elevador de Dureza Cálcica</td>
+          <td>15g para cada 1.000 lt</td>
+          <td>sobe 10 pmm</td>
+          <td>ideal entre 200 a 400 pmm</td>
+          <td>Total</td>
+          <td id="resultado-dureza" class="resultado"></td>
+        </tr>
+        <tr>
+          <td class="bold">Ácido Cianúrico Dureza alta drenar</td>
+          <td>40 a 50% d'agua da piscina</td>
+          <td></td>
+          <td>ideal entre 0 a 50 ppm</td>
+          <td>Total</td>
+          <td id="resultado-cianurico" class="resultado"></td>
+        </tr>
+        <tr>
+          <td class="bold">Genquest Genco</td>
+          <td>10 ml para cada 1.000 lt</td>
+          <td>tirar metais</td>
+          <td>50 ml para tirar manchas de ferrugens</td>
+          <td>Total</td>
+          <td id="resultado-genquest" class="resultado"></td>
+        </tr>
+      </table>
+    </section>
+    <footer>
+      <!-- <img src="img/logo.jpg" alt="logo"> -->
+    </footer>
+  </div>
+</body>
+<script src="js/calculo_piscina.js"></script>
+<script src="js/calculo_produtos.js"></script>
+
+</html>
