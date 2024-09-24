@@ -49,7 +49,7 @@ function calculoPiscina() {
   if (alcalinidade.value < 100) {
     resultadoAlcalinidade.innerHTML = formatarNumeroComPontos(
       Math.abs(
-        (+alcalinidade.value.replace(",", ".") - 100) * 15 * resultadoFinal
+        (+alcalinidade.value.replace(",", ".") - 100) * 1.5 * resultadoFinal
       )
     );
   } else {
@@ -63,7 +63,7 @@ function calculoPiscina() {
 
   if (alcalinidade.value >= 100) {
     resultadoAlcalinidade2.innerHTML = formatarNumeroComPontos(
-      (+alcalinidade.value.replace(",", ".") - 100) * 15 * resultadoFinal
+      (+alcalinidade.value.replace(",", ".") - 100) * 1.5 * resultadoFinal
     );
   } else {
     resultadoAlcalinidade2.innerHTML = 0;
